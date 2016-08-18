@@ -17,7 +17,7 @@ namespace FinalExam.Models
         }
 
         /// <summary>
-        /// This constructor takes one parameter - Name
+        /// This consturcotr takes one parameter - Name
         /// </summary>
         /// 
         public Genre (string Name)
@@ -25,8 +25,9 @@ namespace FinalExam.Models
             this.Name = Name;
         }
 
-        public int GenreID { get; set; }
-
-        public string Name { get; set; }
+            public virtual int GenreId { get; set; }
+            public virtual string Name { get; set; }
+            public virtual string Description { get; set; }
+            public virtual List<Album> Albums { get; set; }
+        }
     }
-}
